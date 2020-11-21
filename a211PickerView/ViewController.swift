@@ -62,6 +62,19 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         default:
             break
         }
+        
+        if pickerView.selectedRow(inComponent: 0) != 0
+            && pickerView.selectedRow(inComponent: 1) != 0{
+            print("計算命：\(astrological[pickerView.selectedRow(inComponent: 0)]),\(bloudType[pickerView.selectedRow(inComponent: 1)])")
+            
+        }else{
+            print("還沒選好")
+        }
+        
+        
+        
+        
+        
     }
     
     
