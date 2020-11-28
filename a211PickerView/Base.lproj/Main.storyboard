@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lZg-RJ-SSO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -31,18 +31,57 @@
                             <constraint firstItem="RbO-0a-oSr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kvM-K5-zoa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jTt-cZ-4bf"/>
                     <connections>
                         <outlet property="pickerView" destination="RbO-0a-oSr" id="2HM-Op-Hs1"/>
+                        <segue destination="7wQ-bc-pPM" kind="show" identifier="goToPage2" id="Ipl-pU-BhJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="59"/>
+            <point key="canvasLocation" x="897.10144927536237" y="58.928571428571423"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ILb-z3-6T9">
+            <objects>
+                <viewController id="7wQ-bc-pPM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pDK-yf-wic">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Et-8J-lCu"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zWW-Ju-g6Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrL-wP-wpg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984" y="59"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YAT-qA-yB1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lZg-RJ-SSO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hmn-M2-8jO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GVC-Jk-PQB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0n-PN-Cac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="58.928571428571423"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
