@@ -48,10 +48,40 @@
                     <view key="view" contentMode="scaleToFill" id="pDK-yf-wic">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIl-ig-v6K">
+                                <rect key="frame" x="157.5" y="234" width="99" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="AHM-tZ-oMR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4N-EG-znS">
+                                <rect key="frame" x="157.5" y="175" width="99" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="LZt-SP-B0g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4Et-8J-lCu"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="QIl-ig-v6K" firstAttribute="top" secondItem="p4N-EG-znS" secondAttribute="bottom" constant="8" id="ZI4-gQ-7dq"/>
+                            <constraint firstItem="p4N-EG-znS" firstAttribute="centerX" secondItem="pDK-yf-wic" secondAttribute="centerX" id="eBQ-by-0ow"/>
+                            <constraint firstItem="QIl-ig-v6K" firstAttribute="centerX" secondItem="pDK-yf-wic" secondAttribute="centerX" id="gzy-5G-H5s"/>
+                            <constraint firstItem="p4N-EG-znS" firstAttribute="top" secondItem="4Et-8J-lCu" secondAttribute="top" constant="87" id="x6U-xA-iAu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zWW-Ju-g6Y"/>
+                    <connections>
+                        <outlet property="label1" destination="p4N-EG-znS" id="D4l-1Y-Mqd"/>
+                        <outlet property="label2" destination="QIl-ig-v6K" id="4qy-As-i7f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrL-wP-wpg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
