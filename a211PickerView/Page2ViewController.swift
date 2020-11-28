@@ -22,8 +22,6 @@ class Page2ViewController: UIViewController {
         label1.text = bld
         label2.text = str
         
-        
-        
     }
     
 
