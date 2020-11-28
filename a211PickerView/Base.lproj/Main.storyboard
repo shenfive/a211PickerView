@@ -34,6 +34,7 @@
                     <navigationItem key="navigationItem" id="jTt-cZ-4bf"/>
                     <connections>
                         <outlet property="pickerView" destination="RbO-0a-oSr" id="2HM-Op-Hs1"/>
+                        <outlet property="thePickerView" destination="RbO-0a-oSr" id="6Jn-1l-Mpz"/>
                         <segue destination="7wQ-bc-pPM" kind="show" identifier="goToPage2" id="Ipl-pU-BhJ"/>
                     </connections>
                 </viewController>

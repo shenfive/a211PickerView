@@ -12,9 +12,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     var astrological = ["請選擇你的星座","白羊宮","金牛宮","雙子宮","巨蟹宮","獅子宮","處女宮","天秤宮","天蠍宮","射手宮","摩羯宮","水瓶宮","雙魚宮"]
         var bloudType = ["請選擇你的血型","A","B","O","AB"]
     
-    var selectedBld = ""
-    var selectedStr = ""
-    
+    @IBOutlet weak var thePickerView: UIPickerView!
     
 
 
@@ -35,8 +33,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         switch segue.identifier {
         case "goToPage2":
             if let nextVC = segue.destination as? Page2ViewController{
-                nextVC.bld = selectedBld
-                nextVC.str = selectedStr
+                nextVC.bld = bloudType[thePickerView.selectedRow(inComponent: 1)]
+                nextVC.str = astrological[thePickerView.selectedRow(inComponent: 0)]
             }
         default:
             break
@@ -89,11 +87,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         
         if pickerView.selectedRow(inComponent: 0) != 0
             && pickerView.selectedRow(inComponent: 1) != 0{
-            print("計算命：\(astrological[pickerView.selectedRow(inComponent: 0)]),\(bloudType[pickerView.selectedRow(inComponent: 1)])")
-            
-            self.selectedBld = bloudType[pickerView.selectedRow(inComponent: 1)]
-            self.selectedStr = astrological[pickerView.selectedRow(inComponent: 0)] 
-            
             self.performSegue(withIdentifier: "goToPage2", sender: self)
             
         }else{
